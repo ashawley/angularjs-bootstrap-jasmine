@@ -1,4 +1,7 @@
 AngularJS 1.x testing with Jasmine
+==================================
+
+[![Build Status](https://travis-ci.org/ashawley/angularjs-bootstrap-jasmine.svg?branch=master)](https://travis-ci.org/ashawley/angularjs-bootstrap-jasmine)
 
     $ git clone git@github.com/ashawley/angularjs-jasmine-karma.git -o upstream
     
@@ -20,12 +23,14 @@ AngularJS 1.x testing with Jasmine
       http://localhost:8080
     Hit CTRL-C to stop the server
     
-    $ karma start --single-run
+    $ npm test
+
+    $ karma start
     INFO [karma]: Karma v0.13.22 server started at http://localhost:9877/
     TOTAL: 18 SUCCESS
     
     $ karma start --browsers Chrome
 
-https://docs.angularjs.org/tutorial
-https://docs.angularjs.org/guide
-http://bguiz.github.io/js-standards/angularjs/naming/
+- https://docs.angularjs.org/tutorial
+- https://docs.angularjs.org/guide
+- http://bguiz.github.io/js-standards/angularjs/naming/
