@@ -1,9 +1,9 @@
 AngularJS 1.x testing with Jasmine
 ==================================
 
-[![Build Status](https://travis-ci.org/ashawley/angularjs-bootstrap-jasmine.svg?branch=master)](https://travis-ci.org/ashawley/angularjs-bootstrap-jasmine)
+[![Build Status](https://travis-ci.org/ashawley/angularjs-bootstrap-jasmine.svg?branch=hello-world)](https://travis-ci.org/ashawley/angularjs-bootstrap-jasmine)
 
-    $ git clone git@github.com/ashawley/angularjs-jasmine-karma.git -o upstream
+    $ git clone git@github.com/ashawley/angularjs-bootstrap-jasmine.git -o upstream
     
     $ npm install
     added 469 packages in 20.186s
@@ -15,7 +15,7 @@ AngularJS 1.x testing with Jasmine
     
     $ npm start
     
-    > angularjs-jasmine-karma@0.0.0 start ./angularjs-jasmine-karma
+    > angularjs-bootstrap-jasmine@0.0.0 start ./angularjs-bootstrap-jasmine
     > http-server -a localhost -p 8080 -c-1 ./app
     
     Starting up http-server, serving ./app
