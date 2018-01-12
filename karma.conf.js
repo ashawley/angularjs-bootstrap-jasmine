@@ -5,20 +5,8 @@ module.exports = function(config) {
     basePath: '.',
 
     files: [
-      'app/lib/jquery/dist/jquery.js',
-      'app/lib/angular/angular.js',
-      'app/lib/angular-route/angular-route.js',
-      'app/lib/angular-sanitize/angular-sanitize.js',
+      'app/index.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'app/lib/bootstrap/dist/js/bootstrap.js',
-      'app/main/mainModule.js',
-      'app/main/mainValue.js',
-      'app/main/mainService.js',
-      'app/main/mainProvider.js',
-      'app/main/mainFilter.js',
-      'app/main/mainController.js',
-      'app/main/mainDirective.js',
-      'app/app.js',
       'test/**/*Spec.js'
     ],
 
@@ -26,7 +14,14 @@ module.exports = function(config) {
       '**/*~'
     ],
 
-    frameworks: ['jasmine'],
+    preprocessors: {
+      'app/*.js': [ 'browserify' ]
+    },
+
+    frameworks: [
+      'browserify',
+      'jasmine'
+    ],
 
     browsers: [
       'Chrome', 
@@ -35,6 +30,10 @@ module.exports = function(config) {
     ],
 
     reporters: ['progress'],
+
+    browserify: {
+      debug: true
+    }
 
   });
 };

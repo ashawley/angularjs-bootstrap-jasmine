@@ -8,16 +8,21 @@
     "angular-loader": "~1.3.20",
     "angular-route": "~1.3.20",
     "angular-sanitize": "~1.3.20",
+    "angular-ui-bootstrap": "^2.5.6",
     "bootstrap": "3.3.7",
     "jquery": "2.1.4"
   },
   "devDependencies": {
     "angular-mocks": "~1.3.20",
+    "beefy": "^2.1.8",
+    "browserify": "^15.1.0",
+    "budo": "^10.0.4",
     "http-server": "^0.10.0",
     "jasmine-core": "^2.1.3",
     "jasmine-jquery": "^2.1.1",
     "jshint": "^2.9.5",
     "karma": "^0.13.22",
+    "karma-browserify": "^5.1.3",
     "karma-chrome-launcher": "^0.2.3",
     "karma-coverage": "^0.5.4",
     "karma-firefox-launcher": "^0.1.7",
@@ -26,16 +31,26 @@
     "karma-phantomjs-launcher": "^1.0.3",
     "path": "^0.12.7",
     "phantomjs-prebuilt": "^2.1.16",
-    "shelljs": "^0.7.8"
+    "shelljs": "^0.7.8",
+    "uglify-js": "^3.3.5",
+    "watchify": "^3.9.0"
   },
   "scripts": {
-    "prestart": "npm install",
+    "prestart": "npm install && npm run build",
     "postinstall": "npm run copy-libs",
     "copy-libs": "node scripts/copy-libs.js",
-    "lint": "jshint ./app --exclude ./app/lib",
-    "pretest": "npm run lint",
+    "lint": "jshint ./app --exclude ./app/dist",
+    "prebuild": "npm run lint",
+    "build:browserify": "browserify ./app/index.js -o ./app/dist/index.js",
+    "build:uglifyjs": "uglifyjs ./app/dist/index.js -c -o ./app/dist/index.min.js",
+    "build": "npm run build:browserify && npm run build:uglifyjs",
+    "watch:build": "watchify ./app/index.js -d -o ./app/dist/index.js",
+    "pretest": "npm install",
     "test": "karma start --single-run",
-    "karma": "karma start",
-    "start": "http-server -a localhost -p 8080 -c-1 ./app"
+    "watch:test": "karma start --auto-watch",
+    "start": "http-server -a localhost -p 8080 -c-1 ./app",
+    "start:beefy": "beefy app/index.js:dist/index.js 8080 --index=./app/index.html --cwd ./app --open --live -- -o app/dist/index.js",
+    "start:budo": "budo app/index.js:dist/index.js -v -H localhost -p 8080 -d ./app --open --live -- -o app/dist/index.js",
+    "watch:start": "npm run start:budo"
   }
 }
