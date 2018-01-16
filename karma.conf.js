@@ -4,6 +4,10 @@ module.exports = function(config) {
 
     basePath: '.',
 
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'app/'
+    },
+
     files: [
       'app/lib/jquery/dist/jquery.js',
       'app/lib/angular/angular.js',
@@ -22,12 +26,17 @@ module.exports = function(config) {
       'app/main/mainComponent.js',
       'app/app.js',
       'app/appConfig.js',
+      'app/main/mainView.html',
       'test/**/*Spec.js'
     ],
 
     exclude: [
       '**/*~'
     ],
+
+    preprocessors: {
+      'app/main/mainView.html': ['ng-html2js']
+    },
 
     frameworks: ['jasmine'],
 
