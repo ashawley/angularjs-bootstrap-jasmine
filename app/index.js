@@ -6,8 +6,10 @@ require('angular-route');
 require('angular-sanitize');
 
 require('./app.js');
+require('./appConfig.js');
 
 require('./main/mainModule.js');
+require('./main/mainConfig.js');
 require('./main/mainValue.js');
 require('./main/mainService.js');
 require('./main/mainProvider.js');

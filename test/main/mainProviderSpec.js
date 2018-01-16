@@ -19,7 +19,7 @@ describe('mainProvider', function() {
   });
 
   it('greeting', function() {
-    expect(mainProvider.greeting()).toBeUndefined();
+    expect(mainProvider.greeting()).toBe('Hello, world!');
   });
 
   it('setGreeting greeting', function() {
