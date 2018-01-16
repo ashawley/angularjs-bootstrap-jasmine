@@ -19,6 +19,7 @@ module.exports = function(config) {
       'app/main/mainFilter.js',
       'app/main/mainController.js',
       'app/main/mainDirective.js',
+      'app/main/mainComponent.js',
       'app/app.js',
       'app/appConfig.js',
       'test/**/*Spec.js'
