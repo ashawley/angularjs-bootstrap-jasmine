@@ -3,6 +3,7 @@
 describe('mainDirective', function() {
 
   beforeEach(module('mainModule'));
+  beforeEach(module('main/mainView.html'));
 
   var element;
   var scope;

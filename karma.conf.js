@@ -4,9 +4,14 @@ module.exports = function(config) {
 
     basePath: '.',
 
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'app/'
+    },
+
     files: [
       'app/index.js',
       'node_modules/angular-mocks/angular-mocks.js',
+      'app/main/mainView.html',
       'test/**/*Spec.js'
     ],
 
@@ -15,7 +20,8 @@ module.exports = function(config) {
     ],
 
     preprocessors: {
-      'app/*.js': [ 'browserify' ]
+      'app/*.js': [ 'browserify' ],
+      'app/main/mainView.html': ['ng-html2js']
     },
 
     frameworks: [
