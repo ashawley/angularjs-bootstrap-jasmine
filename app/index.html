@@ -17,8 +17,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-<body class="container" ng-controller="mainController">
-    <main-directive/>
+<body class="container" ng-controller="mainController as ctrl">
+    <main-component greeting="ctrl.greeting"/>
   
     <script src="dist/index.js"></script>
 </body>

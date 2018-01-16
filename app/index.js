@@ -16,3 +16,4 @@ require('./main/mainProvider.js');
 require('./main/mainFilter.js');
 require('./main/mainController.js');
 require('./main/mainDirective.js');
+require('./main/mainComponent.js');
