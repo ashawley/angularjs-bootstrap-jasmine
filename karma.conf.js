@@ -12,6 +12,7 @@ module.exports = function(config) {
       'node_modules/angular-mocks/angular-mocks.js',
       'app/lib/bootstrap/dist/js/bootstrap.js',
       'app/main/mainModule.js',
+      'app/main/mainConfig.js',
       'app/main/mainValue.js',
       'app/main/mainService.js',
       'app/main/mainProvider.js',
@@ -19,6 +20,7 @@ module.exports = function(config) {
       'app/main/mainController.js',
       'app/main/mainDirective.js',
       'app/app.js',
+      'app/appConfig.js',
       'test/**/*Spec.js'
     ],
 

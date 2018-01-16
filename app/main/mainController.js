@@ -2,6 +2,6 @@
 
 angular.module('mainModule').controller('mainController',
   function ($scope, mainProvider) {
-    $scope.greeting = 'Hello, world!'; // mainProvider.greeting();
+    $scope.greeting = mainProvider.greeting();
   }
 );

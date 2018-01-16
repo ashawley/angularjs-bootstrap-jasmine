@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mainModule')
-  .config(function (mainProvider) {
-    mainProvider.setGreeting('Hello, world!');
+  .config(function (mainProviderProvider) {
+    mainProviderProvider.setGreeting('Hello, world!');
   }
 );
