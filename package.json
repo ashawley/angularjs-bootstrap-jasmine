@@ -46,7 +46,7 @@
     "build:uglifyjs": "uglifyjs ./app/dist/index.js -c -o ./app/dist/index.min.js",
     "build": "npm run build:browserify && npm run build:uglifyjs",
     "watch:build": "watchify ./app/index.js -d -o ./app/dist/index.js",
-    "pretest": "npm install",
+    "pretest": "npm install && npm run build",
     "test": "karma start --single-run",
     "watch:test": "karma start --auto-watch",
     "start": "http-server -a localhost -p 8080 -c-1 ./app",
