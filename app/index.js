@@ -5,6 +5,10 @@ require('angular-ui-bootstrap');
 require('angular-route');
 require('angular-sanitize');
 
+var $ = require('jquery');
+
+require('bootstrap');
+
 require('./app.js');
 require('./appConfig.js');
 

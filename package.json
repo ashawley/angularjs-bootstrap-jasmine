@@ -16,6 +16,7 @@
     "angular-mocks": "^1.6.8",
     "beefy": "^2.1.8",
     "browserify": "^15.1.0",
+    "browserify-shim": "^3.8.14",
     "budo": "^10.0.4",
     "http-server": "^0.10.0",
     "jasmine-core": "^2.1.3",
@@ -35,6 +36,18 @@
     "shelljs": "^0.7.8",
     "uglify-js": "^3.3.5",
     "watchify": "^3.9.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js"
+  },
+  "browserify-shim": {
+    "jquery": "$"
   },
   "scripts": {
     "prestart": "npm install && npm run build",
