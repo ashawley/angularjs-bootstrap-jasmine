@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('myApp')
-  .config(function (mainProviderProvider) {
-    mainProviderProvider.setGreeting('HELLO, WORLD!');
-  }
+  .config(['$compileProvider', function ($compileProvider) {  
+    $compileProvider.debugInfoEnabled(false);
+  }]
 );
