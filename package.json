@@ -5,7 +5,8 @@
   "main": "app/js/index.js",
   "scripts": {
     "pretest": "npm install",
-    "test": "karma start ./karma.conf.js --single-run"
+    "test": "karma start ./karma.conf.js --single-run",
+    "watch:test": "karma start --auto-watch"
   },
   "browserify": {
     "transform": [

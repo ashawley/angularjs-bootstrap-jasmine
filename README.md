@@ -204,3 +204,10 @@ Run the test suite:
     PhantomJS 2.1.1 (Mac OS X 0.0.0): Executed 3 of 3 SUCCESS (0.017 secs / 0 secs)
     Firefox 57.0.0 (Mac OS X 10.12.0): Executed 3 of 3 SUCCESS (0.041 secs / 0 secs)
     TOTAL: 9 SUCCESS
+
+Automatically-triggered test runner:
+
+    $ npm run watch:test
+    
+    > blackjack-angularjs@0.0.0 watch:test ./
+    > karma start --auto-watch
