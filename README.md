@@ -229,7 +229,10 @@ Build task:
     up to date in 7.17s
     
     > blackjack-angularjs@0.0.0 build ./
-    > npm run build:browserify
+    > npm run build:browserify && npm run build:uglify
     
     > blackjack-angularjs@0.0.0 build:browserify ./
     > browserify ./app/js/index.js -o ./app/dist/js/index.js
+
+    > blackjack-angularjs@0.0.0 build:uglify ./
+    > uglifyjs ./app/dist/js/index.js -c -o ./app/dist/js/index.min.js
