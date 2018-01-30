@@ -217,7 +217,7 @@ Build task:
     $ npm run build
     
     > blackjack-angularjs@0.0.0 prebuild ./
-    > npm install
+    > npm install && npm run lint
     
     
     > blackjack-angularjs@0.0.0 postinstall ./
@@ -227,6 +227,9 @@ Build task:
     > node scripts/copy-libs.js
     
     up to date in 7.17s
+    
+    > blackjack-angularjs@0.0.0 lint ./
+    > jshint ./app/js --exclude ./app/dist
     
     > blackjack-angularjs@0.0.0 build ./
     > npm run build:browserify && npm run build:uglify

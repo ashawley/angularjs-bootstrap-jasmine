@@ -6,9 +6,10 @@
   "scripts": {
     "postinstall": "npm run copy-libs",
     "copy-libs": "node scripts/copy-libs.js",
+    "lint": "jshint ./app/js --exclude ./app/dist",
     "build:browserify": "browserify ./app/js/index.js -o ./app/dist/js/index.js",
     "build:uglify": "uglifyjs ./app/dist/js/index.js -c -o ./app/dist/js/index.min.js",
-    "prebuild": "npm install",
+    "prebuild": "npm install && npm run lint",
     "build": "npm run build:browserify && npm run build:uglify",
     "pretest": "npm run build",
     "test": "karma start ./karma.conf.js --single-run",
