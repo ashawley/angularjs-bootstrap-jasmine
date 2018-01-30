@@ -4,7 +4,8 @@
   "description": "Blackjack in AngularJS 1.x",
   "main": "app/js/index.js",
   "scripts": {
-    "test": "karma start --single-run"
+    "pretest": "npm install",
+    "test": "karma start ./karma.conf.js --single-run"
   },
   "repository": {
     "type": "git",

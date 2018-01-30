@@ -129,3 +129,51 @@ Add development dependencies:
     + karma-less-preprocessor@0.3.3
     + watchify@3.10.0
     added 967 packages in 68.794s
+
+Install karma command-line tool:
+
+    $ npm install -g karma-cli
+    /usr/local/bin/karma -> /usr/local/lib/node_modules/karma-cli/bin/karma
+    + karma-cli@1.0.1
+    added 1 packages in 2.385s
+
+Initialize test suite:
+
+    $ karma init
+    
+    Which testing framework do you want to use ?
+    Press tab to list possible options. Enter to move to the next question.
+    > jasmine
+    
+    Do you want to use Require.js ?
+    This will add Require.js plugin.
+    Press tab to list possible options. Enter to move to the next question.
+    > no
+    
+    Do you want to capture any browsers automatically ?
+    > Press tab to list possible options. Enter empty string to move to the next question. 
+    > Chrome
+    > Firefox
+    > PhantomJS
+    > 
+    
+    What is the location of your source and test files ?
+    You can use glob patterns, eg. "js/*.js" or "test/**/*Spec.js".
+    Enter empty string to move to the next question.
+    > app/js/index.js
+    > node_modules/angular-mocks/angular-mocks.js
+    > test/js/**/*Spec.js
+    > 
+    
+    Should any of the files included by the previous patterns be excluded ?
+    You can use glob patterns, eg. "**/*.swp".
+    Enter empty string to move to the next question.
+    > **/*~
+    > 
+    
+    Do you want Karma to watch all the files and run the tests on change ?
+    Press tab to list possible options.
+    > yes
+    
+    
+    Config file generated at "./karma.conf.js".
