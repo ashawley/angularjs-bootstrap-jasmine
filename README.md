@@ -54,3 +54,17 @@ Install package dependencies:
 
     $ npm install
     up to date in 0.102s
+
+Add dependencies:
+
+    $ npm install angular angular-loader angular-route angular-sanitize \
+                  angular-ui-bootstrap bootstrap@3 jquery --save-prod
+    
+    + angular-ui-bootstrap@2.5.6
+    + angular@1.6.8
+    + angular-loader@1.6.8
+    + angular-route@1.6.8
+    + angular-sanitize@1.6.8
+    + jquery@3.3.1
+    + bootstrap@3.3.7
+    added 7 packages in 3.599s

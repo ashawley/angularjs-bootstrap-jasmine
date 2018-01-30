@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/ashawley/blackjack-angularjs/issues"
   },
-  "homepage": "https://github.com/ashawley/blackjack-angularjs#readme"
+  "homepage": "https://github.com/ashawley/blackjack-angularjs#readme",
+  "dependencies": {
+    "angular": "^1.6.8",
+    "angular-loader": "^1.6.8",
+    "angular-route": "^1.6.8",
+    "angular-sanitize": "^1.6.8",
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.3.1"
+  }
 }
