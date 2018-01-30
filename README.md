@@ -211,3 +211,25 @@ Automatically-triggered test runner:
     
     > blackjack-angularjs@0.0.0 watch:test ./
     > karma start --auto-watch
+
+Build task:
+
+    $ npm run build
+    
+    > blackjack-angularjs@0.0.0 prebuild ./
+    > npm install
+    
+    
+    > blackjack-angularjs@0.0.0 postinstall ./
+    > npm run copy-libs
+    
+    > blackjack-angularjs@0.0.0 copy-libs ./
+    > node scripts/copy-libs.js
+    
+    up to date in 7.17s
+    
+    > blackjack-angularjs@0.0.0 build ./
+    > npm run build:browserify
+    
+    > blackjack-angularjs@0.0.0 build:browserify ./
+    > browserify ./app/js/index.js -o ./app/dist/js/index.js
