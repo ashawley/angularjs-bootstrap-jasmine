@@ -4,6 +4,8 @@
   "description": "Blackjack in AngularJS 1.x",
   "main": "app/js/index.js",
   "scripts": {
+    "postinstall": "npm run copy-libs",
+    "copy-libs": "node scripts/copy-libs.js",
     "pretest": "npm install",
     "test": "karma start ./karma.conf.js --single-run",
     "watch:test": "karma start --auto-watch"
