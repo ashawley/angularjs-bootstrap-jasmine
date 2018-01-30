@@ -49,3 +49,8 @@ Initialize project:
     
     
     Is this ok? (yes) yes
+
+Install package dependencies:
+
+    $ npm install
+    up to date in 0.102s
