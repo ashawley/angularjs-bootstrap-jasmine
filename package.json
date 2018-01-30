@@ -7,6 +7,18 @@
     "pretest": "npm install",
     "test": "karma start ./karma.conf.js --single-run"
   },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js"
+  },
+  "browserify-shim": {
+    "jquery": "$"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/ashawley/blackjack-angularjs.git"

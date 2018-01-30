@@ -177,3 +177,30 @@ Initialize test suite:
     
     
     Config file generated at "./karma.conf.js".
+
+Run the test suite:
+
+    $ npm test
+    
+    > blackjack-angularjs@0.0.0 pretest ./
+    > npm install
+    up to date in 6.162s
+    
+    > blackjack-angularjs@0.0.0 test ./
+    > karma start ./karma.conf.js --single-run
+    
+    30 01 2018 01:17:37.623:INFO [framework.browserify]: bundle built
+    30 01 2018 01:17:37.668:WARN [karma]: Port 9876 in use
+    30 01 2018 01:17:37.670:INFO [karma]: Karma v2.0.0 server started at http://0.0.0.0:9877/
+    30 01 2018 01:17:37.670:INFO [launcher]: Launching browsers Chrome, Firefox, PhantomJS with unlimited concurrency
+    30 01 2018 01:17:37.729:INFO [launcher]: Starting browser Chrome
+    30 01 2018 01:17:37.744:INFO [launcher]: Starting browser Firefox
+    30 01 2018 01:17:37.753:INFO [launcher]: Starting browser PhantomJS
+    30 01 2018 01:17:40.226:INFO [Chrome 63.0.3239 (Mac OS X 10.12.3)]: Connected on socket RMsck1NEbw5TYKiNAAAA with id 42191936
+    Chrome 63.0.3239 (Mac OS X 10.12.3): Executed 3 of 3 SUCCESS (0.022 secs / 0 secs)
+    30 01 2018 01:17:42.860:INFO [PhantomJS 2.1.1 (Mac OS X 0.0.0)]: Connected on socket GChrome 63.0.3239 (Mac OS X 10.12.3): Executed 3 of 3 SUCCESS (0.022 secs / 0 secs)
+    PhantomJS 2.1.1 (Mac OS X 0.0.0): Executed 3 of 3 SUCCESS (0.017 secs / 0 secs)
+    Chrome 63.0.3239 (Mac OS X 10.12.3): Executed 3 of 3 SUCCESS (0.022 secs / 0 secs)
+    PhantomJS 2.1.1 (Mac OS X 0.0.0): Executed 3 of 3 SUCCESS (0.017 secs / 0 secs)
+    Firefox 57.0.0 (Mac OS X 10.12.0): Executed 3 of 3 SUCCESS (0.041 secs / 0 secs)
+    TOTAL: 9 SUCCESS
