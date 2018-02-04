@@ -13,7 +13,8 @@
     "prebuild": "npm install && npm run lint",
     "build": "npm run build:browserify && npm run build:uglify && npm run build:less",
     "pretest": "npm run build",
-    "test": "karma start ./karma.conf.js --single-run --no-auto-watch",
+    "test:karma": "karma start ./karma.conf.js --single-run --no-auto-watch",
+    "test": "npm run test:karma",
     "watch:test": "karma start ./karma.conf.js --auto-watch"
   },
   "browserify": {
@@ -78,6 +79,7 @@
     "less-plugin-clean-css": "^1.5.1",
     "path": "^0.12.7",
     "phantomjs-prebuilt": "^2.1.16",
+    "protractor": "^5.3.0",
     "shelljs": "^0.8.1",
     "svgo": "^1.0.3",
     "uglify-js": "^3.3.9",
