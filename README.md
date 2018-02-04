@@ -232,10 +232,13 @@ Build task:
     > jshint ./app/js --exclude ./app/dist
     
     > blackjack-angularjs@0.0.0 build ./
-    > npm run build:browserify && npm run build:uglify
+    > npm run build:browserify && npm run build:uglify && npm run build:less
     
     > blackjack-angularjs@0.0.0 build:browserify ./
     > browserify ./app/js/index.js -o ./app/dist/js/index.js
 
     > blackjack-angularjs@0.0.0 build:uglify ./
     > uglifyjs ./app/dist/js/index.js -c -o ./app/dist/js/index.min.js
+    
+    > blackjack-angularjs@0.0.0 build:less ./
+    > lessc --clean-css ./app/style/index.less ./app/dist/style/index.css

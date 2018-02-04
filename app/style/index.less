@@ -1,0 +1,8 @@
+@import (less) "../dist/bootstrap/dist/css/bootstrap.css";
+
+/**
+ * This is the published CSS hack for ui.bootstrap to deal with a flaw
+ * with empty href as documented on
+ * https://angular-ui.github.io/bootstrap/
+ */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

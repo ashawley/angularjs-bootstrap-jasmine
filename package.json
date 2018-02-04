@@ -9,11 +9,12 @@
     "lint": "jshint ./app/js --exclude ./app/dist",
     "build:browserify": "browserify ./app/js/index.js -o ./app/dist/js/index.js",
     "build:uglify": "uglifyjs ./app/dist/js/index.js -c -o ./app/dist/js/index.min.js",
+    "build:less": "lessc --clean-css ./app/style/index.less ./app/dist/style/index.css",
     "prebuild": "npm install && npm run lint",
-    "build": "npm run build:browserify && npm run build:uglify",
+    "build": "npm run build:browserify && npm run build:uglify && npm run build:less",
     "pretest": "npm run build",
     "test": "karma start ./karma.conf.js --single-run",
-    "watch:test": "karma start --auto-watch"
+    "watch:test": "karma start ./karma.conf.js --auto-watch"
   },
   "browserify": {
     "transform": [
@@ -68,6 +69,7 @@
     "karma-coverage": "^1.1.1",
     "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.1",
+    "karma-jasmine-jquery": "^0.1.1",
     "karma-junit-reporter": "^1.2.0",
     "karma-less-preprocessor": "^0.3.3",
     "karma-ng-html2js-preprocessor": "^1.0.0",
