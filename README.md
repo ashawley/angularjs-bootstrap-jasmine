@@ -242,3 +242,63 @@ Build task:
     
     > blackjack-angularjs@0.0.0 build:less ./
     > lessc --clean-css ./app/style/index.less ./app/dist/style/index.css
+
+End-to-end testing requires protractor:
+
+    $ npm install -g protractor
+    /usr/local/bin/protractor -> /usr/local/lib/node_modules/protractor/bin/protractor
+    /usr/local/bin/webdriver-manager -> /usr/local/lib/node_modules/protractor/bin/webdriver-manager
+    + protractor@5.3.0
+    added 136 packages in 13.834s
+    
+    $ webdriver-manager update
+    [17:51:06] I/file_manager - creating folder /usr/local/lib/node_modules/protractor/node_modules/webdriver-manager/selenium
+    [17:51:08] I/update - geckodriver: unzipping geckodriver-v0.19.1.tar.gz
+    [17:51:09] I/update - geckodriver: setting permissions to 0755 for /usr/local/lib/node_modules/protractor/node_modules/webdriver-manager/selenium/geckodriver-v0.19.1
+    [17:51:09] I/update - chromedriver: unzipping chromedriver_2.35.zip
+    [17:51:09] I/update - chromedriver: setting permissions to 0755 for /usr/local/lib/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.35
+
+    $ webdriver-manager start
+    [17:52:04] I/start - java -Dwebdriver.chrome.driver=/usr/local/lib/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.35 -Dwebdriver.gecko.driver=/usr/local/lib/node_modules/protractor/node_modules/webdriver-manager/selenium/geckodriver-v0.19.1 -jar /usr/local/lib/node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.8.1.jar -port 4444
+    [17:52:05] I/start - seleniumProcess.pid: 17731
+    17:52:06.689 INFO - Selenium build info: version: '3.8.1', revision: '6e95a6684b'
+    17:52:06.690 INFO - Launching a standalone Selenium Server
+    2018-02-04 17:52:07.408:INFO::main: Logging initialized @2136ms to org.seleniumhq.jetty9.util.log.StdErrLog
+    17:52:07.634 INFO - Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+    17:52:07.706 INFO - Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+    17:52:07.731 INFO - Using `new EdgeOptions()` is preferred to `DesiredCapabilities.edge()`
+    17:52:07.738 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+    17:52:07.738 INFO - Using `new OperaOptions()` is preferred to `DesiredCapabilities.operaBlink()`
+    17:52:07.745 INFO - Using `new SafariOptions()` is preferred to `DesiredCapabilities.safari()`
+    17:52:07.749 INFO - Driver class not found: org.openqa.selenium.phantomjs.PhantomJSDriver
+    17:52:07.918 INFO - Driver provider class org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+     registration capabilities Capabilities {browserName: internet explorer, ensureCleanSession: true, platform: WINDOWS, version: } does not match the current platform MAC
+    17:52:07.919 INFO - Driver provider class org.openqa.selenium.edge.EdgeDriver registration is skipped:
+     registration capabilities Capabilities {browserName: MicrosoftEdge, platform: WINDOWS, version: } does not match the current platform MAC
+    17:52:08.130 INFO - Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+    17:52:08.132 INFO - Using `new EdgeOptions()` is preferred to `DesiredCapabilities.edge()`
+    17:52:08.132 INFO - Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+    17:52:08.133 INFO - Using `new OperaOptions()` is preferred to `DesiredCapabilities.operaBlink()`
+    17:52:08.133 INFO - Using `new SafariOptions()` is preferred to `DesiredCapabilities.safari()`
+    17:52:08.177 INFO - Using the passthrough mode handler
+    2018-02-04 17:52:08.335:INFO:osjs.Server:main: jetty-9.4.7.v20170914
+    2018-02-04 17:52:08.443:WARN:osjs.SecurityHandler:main: ServletContext@o.s.j.s.ServletContextHandler@1caa0244{/,null,STARTING} has uncovered http methods for path: /
+    2018-02-04 17:52:08.456:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@1caa0244{/,null,AVAILABLE}
+    2018-02-04 17:52:08.580:INFO:osjs.AbstractConnector:main: Started ServerConnector@34bde49d{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+    2018-02-04 17:52:08.581:INFO:osjs.Server:main: Started @3310ms
+    17:52:08.582 INFO - Selenium Server is up and running
+
+You can start the server with:
+
+    $ npm run watch:start
+    
+    > blackjack-angularjs@0.0.0 watch:start ./blackjack-angularjs
+    > npm run start:budo
+    
+    
+    > blackjack-angularjs@0.0.0 start:budo ./blackjack-angularjs
+    > budo app/js/index.js:dist/js/index.js -v -H localhost -p 8080 -d ./app --open --live -- -o app/dist/js/index.js
+    
+    [0002] info  Server running at http://localhost:8080/ (connect)
+    [0002] info  LiveReload running
+    [0003] 222ms         0B GET    200 /
