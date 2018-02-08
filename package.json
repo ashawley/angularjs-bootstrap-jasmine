@@ -13,7 +13,7 @@
     "prebuild": "npm install && npm run lint",
     "build": "npm run build:browserify && npm run build:uglify && npm run build:less",
     "pretest": "npm run build",
-    "test": "karma start ./karma.conf.js --single-run",
+    "test": "karma start ./karma.conf.js --single-run --no-auto-watch",
     "watch:test": "karma start ./karma.conf.js --auto-watch"
   },
   "browserify": {
