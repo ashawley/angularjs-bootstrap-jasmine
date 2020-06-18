@@ -4,7 +4,7 @@
   "license": "MIT",
   "repository": "https://github.com/ashawley/angularjs-bootstrap-jasmine",
   "dependencies": {
-    "angular": "^1.7.9",
+    "angular": "^1.8.0",
     "angular-loader": "^1.7.9",
     "angular-route": "^1.7.9",
     "angular-sanitize": "^1.7.9",
