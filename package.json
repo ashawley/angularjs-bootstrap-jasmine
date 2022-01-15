@@ -27,7 +27,7 @@
     "karma-phantomjs-launcher": "^1.0.3",
     "path": "^0.12.7",
     "phantomjs-prebuilt": "^2.1.16",
-    "shelljs": "^0.7.8"
+    "shelljs": "^0.8.5"
   },
   "scripts": {
     "prestart": "npm install",
